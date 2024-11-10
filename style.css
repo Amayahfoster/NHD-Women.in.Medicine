@@ -1,51 +1,130 @@
-/* Basic Styling */
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
+/* Header Styling */
 header {
+    text-align: center;
+    padding: 50px 0;
     background-color: #0077b6;
     color: white;
-    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    font-size: 4rem;
+    animation: riseUp 1s ease-out;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #00b4d8;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 1000;
 }
 
-/* Navigation Styling - Inline */
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;  /* Center the nav links */
+    list-style-type: none;
 }
 
-nav li {
-    display: inline;  /* Make the list items inline */
-    margin-right: 15px; /* Space between the links */
+nav ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.1rem;
     font-weight: bold;
-    font-size: 18px;
 }
 
-nav a:hover {
+nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Section Styling */
-section {
-    background-color: white;
-    padding: 20px;
+/* Main Content Section */
+#main {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#main h2 {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+#main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Era Content */
+.era-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.era-details h3 {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-top: 20px;
+}
+
+.era-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 900px;
     margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contributors {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contributor {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.contributor img {
+    width: 100%;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.era-theme {
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.1rem;
 }
 
 /* Footer Styling */
@@ -53,25 +132,45 @@ footer {
     background-color: #0077b6;
     color: white;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Media Query for Mobile Devices */
+/* Animation for Header */
+@keyframes riseUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
-    nav ul {
-        padding: 0;
+    .subheading {
+        font-size: 1rem;
     }
 
-    nav li {
-        margin-right: 10px;
+    .contributors {
+        flex-direction: column;
     }
 
-    nav a {
-        font-size: 16px;
+    .contributor {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
     }
 }
