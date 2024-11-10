@@ -97,6 +97,30 @@ section {
     text-align: center;
 }
 
+/* Layout for Women (Horizontal) */
+.women {
+    display: flex; /* Align the women horizontally */
+    justify-content: space-around; /* Space out the women evenly */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.woman {
+    text-align: center; /* Center the text under the image */
+    width: 30%; /* Each woman gets 30% width */
+    margin: 10px;
+}
+
+.woman img {
+    width: 100%; /* Make the image take full width of the div */
+    border-radius: 8px;
+}
+
+.woman p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
 /* Style for images within sections */
 section img {
     width: 100%;
