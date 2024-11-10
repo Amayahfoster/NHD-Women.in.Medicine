@@ -1,130 +1,109 @@
-/* Global Reset and Base Styles */
+/* Reset some default styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Basic Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Header Styling */
 header {
-    text-align: center;
-    padding: 50px 0;
     background-color: #0077b6;
     color: white;
+    padding: 40px 20px;
+    text-align: center;
     position: relative;
+    overflow: hidden; /* Ensure floating elements are contained */
 }
 
 h1 {
     font-size: 4rem;
-    animation: riseUp 1s ease-out;
+    margin: 0;
+    opacity: 0;
+    position: relative;
+    top: 20px; /* Slightly lower position */
+    animation: floatUp 2s ease-out forwards;
 }
 
-.subheading {
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        top: 20px; /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        top: 0; /* End at the desired position */
+    }
+}
+
+h2 {
     font-size: 1.2rem;
     color: white;
     margin-top: 10px;
-    font-style: italic;
+    font-weight: lighter;
 }
 
-/* Navigation Bar */
+/* Navigation Bar Styling */
 nav {
-    background-color: #00b4d8;
-    text-align: center;
+    background-color: #0077b6;
+    padding: 10px;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 15px 0;
-    z-index: 1000;
+    z-index: 10;
+    text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
+nav li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
     font-weight: bold;
+    font-size: 18px;
 }
 
-nav ul li a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-/* Main Content Section */
-#main {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-#main h2 {
-    font-size: 2rem;
-    color: #0077b6;
-    margin-bottom: 20px;
-}
-
-#main p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-/* Era Content */
-.era-content {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.era-details h3 {
-    font-size: 1.5rem;
-    color: #0077b6;
-    margin-top: 20px;
-}
-
-.era-details p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 900px;
-    margin: 20px auto;
-}
-
-.contributors {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.contributor {
-    width: 30%;
-    margin-bottom: 20px;
-}
-
-.contributor img {
-    width: 100%;
+/* Section Styling for Content */
+section {
+    background-color: white;
+    padding: 40px 20px;
+    margin: 80px auto 20px; /* Adds space between nav bar and content */
+    width: 80%;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.era-theme {
-    margin-top: 30px;
-    font-style: italic;
-    font-size: 1.1rem;
+/* Style for images within sections */
+section img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 /* Footer Styling */
@@ -133,44 +112,102 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: 40px;
 }
 
-/* Animation for Header */
-@keyframes riseUp {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+footer p {
+    font-size: 1rem;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 3rem;
     }
 
-    .subheading {
-        font-size: 1rem;
+    nav ul {
+        padding: 0;
     }
 
-    .contributors {
-        flex-direction: column;
+    nav li {
+        margin: 10px 0;
     }
 
-    .contributor {
-        width: 80%;
-        margin: 20px auto;
+    nav a {
+        font-size: 16px;
     }
 
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
+    section {
+        width: 90%;
     }
+
+    section img {
+        max-width: 90%;
+    }
+}
+
+/* Add the page's theme-specific styles (for each era) */
+.ancient-era {
+    background-color: #c9d6e3;
+    font-style: italic;
+}
+
+.renaissance-era {
+    background-color: #f0e6d2;
+    font-style: italic;
+}
+
+.modern-era {
+    background-color: #d7f3e2;
+    font-style: normal;
+}
+
+/* Custom page titles */
+.page-title {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #0077b6;
+    font-weight: bold;
+}
+
+/* Custom paragraph for NHD theme */
+.nhd-paragraph {
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 30px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+/* Image captions */
+figcaption {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Fun, additional animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* Links that go with hover */
+a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: underline;
 }
