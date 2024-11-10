@@ -1,67 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women in Medicine</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Basic Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-    <header>
-        <h1>Women in Medicine</h1>
-        <!-- Hamburger Menu Icon -->
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ancient-medieval.html">Ancient & Medieval Era</a></li>
-                <li><a href="renaissance-enlightenment.html">Renaissance & Enlightenment</a></li>
-                <li><a href="19th-century.html">19th Century</a></li>
-                <li><a href="early-20th-century.html">Early 20th Century</a></li>
-                <li><a href="modern-era.html">Modern Era</a></li>
-            </ul>
-        </nav>
-    </header>
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-    <section id="intro">
-        <h2>Introduction</h2>
-        <p>Explore the history of women in medicine, from ancient times to the present day. Each era features trailblazing women who helped shape the medical field.</p>
-    </section>
+/* Navigation Styling - Inline */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;  /* Center the nav links */
+}
 
-    <section id="ancient-medieval">
-        <h2><a href="ancient-medieval.html">Ancient & Medieval Era (Pre-1500s)</a></h2>
-        <p>Women were often excluded from formal medical training but still practiced herbal medicine and midwifery.</p>
-    </section>
+nav li {
+    display: inline;  /* Make the list items inline */
+    margin-right: 15px; /* Space between the links */
+}
 
-    <section id="renaissance-enlightenment">
-        <h2><a href="renaissance-enlightenment.html">Renaissance & Enlightenment Era (1500s-1700s)</a></h2>
-        <p>During this period, women like Elizabeth Blackwell began to challenge gender roles and enter the medical field.</p>
-    </section>
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-    <section id="19th-century">
-        <h2><a href="19th-century.html">19th Century (1800s)</a></h2>
-        <p>The 19th century saw more women entering formal medical education and contributing to public health reforms.</p>
-    </section>
+nav a:hover {
+    text-decoration: underline;
+}
 
-    <section id="early-20th-century">
-        <h2><a href="early-20th-century.html">Early 20th Century (1900s-1940s)</a></h2>
-        <p>Women began to gain greater recognition in medicine, with pioneers like Virginia Apgar making groundbreaking contributions.</p>
-    </section>
+/* Section Styling */
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
 
-    <section id="modern-era">
-        <h2><a href="modern-era.html">Modern Era (1950s-Present)</a></h2>
-        <p>Today, women have become leaders in medical research, healthcare policy, and clinical practice.</p>
-    </section>
+/* Footer Styling */
+footer {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
 
-    <footer>
-        <p>Project by Amayah Foster</p>
-    </footer>
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
 
-    <script src="script.js"></script>
-</body>
-</html>
+    nav ul {
+        padding: 0;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+}
