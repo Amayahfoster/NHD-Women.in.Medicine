@@ -11,12 +11,18 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Styling */
 header {
-    background-color: #0077b6;
+    background-color: #0077b6; /* Blue */
     color: white;
     padding: 20px;
     text-align: center;
     position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
 /* Hamburger Menu */
@@ -37,7 +43,7 @@ header {
 
 /* Navigation Styling */
 nav {
-    background-color: #0077b6;
+    background-color: #0077b6; /* Blue */
     padding: 10px;
     position: absolute;
     top: 60px;
@@ -73,12 +79,6 @@ nav.active {
     display: block;
 }
 
-/* Header title and spacing */
-h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
 /* General Section Styling */
 section {
     background-color: white;
@@ -92,12 +92,12 @@ section {
 
 /* Section Highlights */
 #introduction, #conclusion {
-    background-color: #caf0f8;
+    background-color: #caf0f8; /* Light blue */
 }
 
 /* Footer Styling */
 footer {
-    background-color: #0077b6;
+    background-color: #0077b6; /* Blue */
     color: white;
     text-align: center;
     padding: 10px;
