@@ -1,7 +1,10 @@
-// Hamburger Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
+// Wait for the DOM to load completely
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
 
-menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
+    // Toggle the navigation menu visibility
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
 });
